@@ -1,0 +1,25 @@
+version: '3'
+services:
+    web:
+        # use this if react-app cannot run
+        stdin_open: true
+        build: 
+            # where we want to take the file
+            context: .
+            #file name
+            dockerfile: Dockerfile.dev
+        ports:
+            - "3000:3000"
+        volumes: 
+            - /app/node_modules
+            # dot . means outside of the container and /app mean inside the container 
+            - .:/app
+        tty: true  #use this if react-app cannot run   
+    tests:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes: 
+            - /app/node_modules
+            - .:/app
+        command: ["npm", "run", "test"]            
