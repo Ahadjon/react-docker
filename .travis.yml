@@ -9,15 +9,15 @@ before_install:
 script: 
     - docker run -e CI=true ahatajon/react-docker npm run test    
 
-deploy:
-    provider: elasticbeanstalk
-    region: "us-east-1"    
-    app: "react-docker"
-    env: "ReactDocker-env"
-    bucket_name: "elasticbeanstalk-us-east-1-014588499640"
-    bucket_path: "react-docker"
-    on: 
-        branch: master
+# deploy:
+#     provider: elasticbeanstalk
+#     region: "us-east-1"    
+#     app: "react-docker"
+#     env: "ReactDocker-env"
+#     bucket_name: "elasticbeanstalk-us-east-1-014588499640"
+#     bucket_path: "react-docker"
+#     on: 
+#         branch: master
     
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY    
+#     access_key_id: $AWS_ACCESS_KEY
+#     secret_access_key: $AWS_SECRET_KEY    
