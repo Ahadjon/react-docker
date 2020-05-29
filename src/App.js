@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
         <h1>Hi Ahata!</h1>
-        <h2>Woah finally ultimately</h2>
+        <h2>Changed to feature branch </h2>
 
       </header>
     </div>
